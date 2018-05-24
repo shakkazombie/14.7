@@ -4,27 +4,42 @@ var Contact = React.createClass({
     },
 
     render: function() {
-        return (
-            React.createElement('div', {
-                    className: 'contactItem'
-                },
-                React.createElement('img', {
-                    className: 'contactImage',
-                    src: 'https://cdn2.iconfinder.com/data/icons/round-varieties/60/Rounded_-_High_Ultra_Colour10_-_Circuit_Board-256.png'
-                }),
-                React.createElement('p', {
-                    className: 'contactLabel'
-                }, 'Imię: ' + this.props.item.firstName),
-                React.createElement('p', {
-                    className: 'contactLabel'
-                }, 'Nazwisko: ' + this.props.item.lastName),
-                React.createElement('a', {
-                        className: 'contactEmail',
-                        href: 'mailto:' + this.props.item.email
-                    },
-                    this.props.item.email
-                )
-            )
-        );
+        return ( <
+            div className = {
+                'contactItem'
+            } >
+            <
+            img className = {
+                'contactImage'
+            }
+            src = {
+                'https://cdn2.iconfinder.com/data/icons/round-varieties/60/Rounded_-_High_Ultra_Colour10_-_Circuit_Board-256.png'
+            }
+            /> <
+            p className = {
+                'contactLabel'
+            } >
+            Imię: {
+                this.props.item.firstName
+            } <
+            /p> <
+            p className = {
+                'contactLabel'
+            } >
+            Nazwisko: {
+                this.props.item.firstName
+            } <
+            /p> <
+            a className = {
+                'contactEmail'
+            }
+            href = {
+                'mailto:' + this.props.item.email
+            } > {
+                this.props.item.email
+            } <
+            /a> < /
+            div >
+        )
     },
 });
